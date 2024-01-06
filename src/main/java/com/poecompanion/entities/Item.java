@@ -2,7 +2,7 @@ package com.poecompanion.entities;
 
 import jakarta.persistence.*;
 
-@Entity
+@MappedSuperclass
 public class Item {
 
     @Id
