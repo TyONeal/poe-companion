@@ -20,5 +20,8 @@ public class Weapon extends Item {
     @Column(nullable = false)
     private String handedness;
 
+    @Column(nullable = false)
+    private int stashSize;
+
 
 }
