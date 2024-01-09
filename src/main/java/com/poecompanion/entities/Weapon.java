@@ -23,5 +23,22 @@ public class Weapon extends Item {
     @Column(nullable = false)
     private int stashSize;
 
+    public Weapon() {
 
+    }
+
+    public Weapon(String name, String type, String handedness, int stashSize) {
+        this.name = name;
+        this.type = type;
+        this.handedness = handedness;
+        this.stashSize = stashSize;
+    }
+
+    public Weapon(long id, String name, String type, String handedness, int stashSize) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.handedness = handedness;
+        this.stashSize = stashSize;
+    }
 }
