@@ -28,12 +28,12 @@ public class Character {
     private User user;
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "character")
-    private List<Stash> stashList;
+    private List<StashTab> stashList;
 
     public Character() {
     }
 
-    public Character(long id, User user, String characterName, long level, String classType, long skillPoints, List<Stash> stashList) {
+    public Character(long id, User user, String characterName, long level, String classType, long skillPoints, List<StashTab> stashList) {
         this.id = id;
         this.user = user;
         this.characterName = characterName;
@@ -43,7 +43,7 @@ public class Character {
         this.stashList = stashList;
     }
 
-    public Character(User user, String characterName, long level, String classType, long skillPoints, List<Stash> stashList) {
+    public Character(User user, String characterName, long level, String classType, long skillPoints, List<StashTab> stashList) {
         this.user = user;
         this.characterName = characterName;
         this.level = level;
@@ -108,11 +108,11 @@ public class Character {
         this.skillPoints = skillPoints;
     }
 
-    public List<Stash> getStashList() {
+    public List<StashTab> getStashList() {
         return stashList;
     }
 
-    public void setStashList(List<Stash> stashList) {
+    public void setStashList(List<StashTab> stashList) {
         this.stashList = stashList;
     }
 }

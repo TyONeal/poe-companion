@@ -1,54 +1,19 @@
 package com.poecompanion.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-@MappedSuperclass
-public class Item {
+public abstract class Item implements Definable{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private long level;
+    private String description;
 
-    public Item() {
-    }
+    private int size;
 
-    public Item(long id, String name, long level) {
-        this.id = id;
-        this.name = name;
-        this.level = level;
-    }
 
-    public Item(String name) {
-        this.name = name;
-    }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getLevel() {
-        return level;
-    }
-
-    public void setLevel(long level) {
-        this.level = level;
-    }
 }
