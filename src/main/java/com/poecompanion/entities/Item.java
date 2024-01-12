@@ -1,10 +1,8 @@
 package com.poecompanion.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-public abstract class Item implements Definable{
+public abstract class Item implements Definable {
 
     private long id;
 
@@ -14,6 +12,9 @@ public abstract class Item implements Definable{
 
     private int size;
 
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "stash_id")
+    private StashTab stashTab;
 
 
 }

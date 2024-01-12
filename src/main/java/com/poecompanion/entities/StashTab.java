@@ -35,7 +35,6 @@ public class StashTab {
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "stash")
     private List<Item> itemList;
 
-
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "character_id")
     private Character character;
