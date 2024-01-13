@@ -2,8 +2,9 @@ package com.poecompanion.entities;
 
 import jakarta.persistence.*;
 
-public abstract class Item implements Definable {
-
+public class Item {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
