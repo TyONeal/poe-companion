@@ -20,7 +20,6 @@ public class ItemSocket {
 
     @Column
     @ManyToMany(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "item_id")
     private Item items;
 
     public ItemSocket() {
