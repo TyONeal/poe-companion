@@ -55,6 +55,11 @@ public class Item {
     @Column
     private boolean isSynthesised;
 
+    @Column
+    @ManyToMany
+    @JoinTable(name = "item_itemSockets")
+    private ItemSocket itemSockets;
+
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "stash_id")
     private StashTab stashTab;
