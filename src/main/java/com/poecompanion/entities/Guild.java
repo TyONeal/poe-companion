@@ -1,10 +1,10 @@
 package com.poecompanion.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.List;
+
+@Entity
 public class Guild {
 
     @Id
@@ -28,6 +28,10 @@ public class Guild {
 
     @Column(nullable = false)
     private String createdAt;
+
+    @Column(nullable = false)
+    @OneToMany
+    private List<User> memberList;
 
     public Guild() {
     }

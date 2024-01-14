@@ -7,11 +7,53 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    @Column(nullable = false)
+    private String apiId;
 
-    private String description;
+    @Column
+    private boolean verifiedStatus;
 
-    private int size;
+    @Column
+    private String icon;
+
+    @Column
+    private boolean support;
+
+    @Column
+    private int stackSize;
+
+    @Column
+    private int maxStackSize;
+
+    @Column
+    private String stackSizeText;
+
+    @Column
+    private String league;
+
+    @Column
+    private boolean isElder;
+
+    @Column
+    private boolean isShaper;
+
+    @Column
+    private boolean isSearing;
+
+    @Column
+    private boolean isTangled;
+
+    @Column
+    private boolean isAbyssJewel;
+
+    @Column
+    private boolean isDelve;
+
+    @Column
+    private boolean isFractured;
+
+    @Column
+    private boolean isSynthesised;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "stash_id")

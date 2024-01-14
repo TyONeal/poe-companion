@@ -22,6 +22,10 @@ public class User {
     @Column(nullable = false)
     private String realm;
 
+    @Column
+    @ManyToOne
+    private Guild guild;
+
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "user")
     private List<Character> characters;
 
