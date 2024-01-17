@@ -24,6 +24,18 @@ public class User {
     private String realm;
 
     @Column
+    private String twitchHandle;
+
+    @Column
+    private String twitchStreamName;
+
+    @Column
+    private String twitchStreamImage;
+
+    @Column
+    private String twitchStreamStatus;
+
+    @Column
     @ManyToOne
     private Guild guild;
 
