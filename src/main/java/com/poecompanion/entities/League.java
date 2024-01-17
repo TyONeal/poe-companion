@@ -27,16 +27,37 @@ public class League {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "league")
     private List<LeagueRules> leagueRulesList;
 
-    public League() {
-    }
+    @Column
+    private String registerAt;
 
-    public League(long id, String leagueName, String realm, String categoryId, boolean categoryStatus, List<LeagueRules> leagueRulesList) {
-        this.id = id;
-        this.leagueName = leagueName;
-        this.realm = realm;
-        this.categoryId = categoryId;
-        this.categoryStatus = categoryStatus;
-        this.leagueRulesList = leagueRulesList;
+    @Column
+    private boolean isEvent;
+
+    @Column
+    private String url;
+
+    @Column
+    private String startAt;
+
+    @Column
+    private String endAt;
+
+    @Column
+    private boolean isTimedEvent;
+
+    @Column
+    private boolean isScoredEvent;
+
+    @Column
+    private boolean isDelveEvent;
+
+    @Column
+    private boolean isAncestorEvent;
+
+    @Column
+    private boolean isLeagueEvent;
+
+    public League() {
     }
 
     public long getId() {
@@ -85,5 +106,85 @@ public class League {
 
     public void setLeagueRulesList(List<LeagueRules> leagueRulesList) {
         this.leagueRulesList = leagueRulesList;
+    }
+
+    public String getRegisterAt() {
+        return registerAt;
+    }
+
+    public void setRegisterAt(String registerAt) {
+        this.registerAt = registerAt;
+    }
+
+    public boolean isEvent() {
+        return isEvent;
+    }
+
+    public void setEvent(boolean event) {
+        isEvent = event;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getStartAt() {
+        return startAt;
+    }
+
+    public void setStartAt(String startAt) {
+        this.startAt = startAt;
+    }
+
+    public String getEndAt() {
+        return endAt;
+    }
+
+    public void setEndAt(String endAt) {
+        this.endAt = endAt;
+    }
+
+    public boolean isTimedEvent() {
+        return isTimedEvent;
+    }
+
+    public void setTimedEvent(boolean timedEvent) {
+        isTimedEvent = timedEvent;
+    }
+
+    public boolean isScoredEvent() {
+        return isScoredEvent;
+    }
+
+    public void setScoredEvent(boolean scoredEvent) {
+        isScoredEvent = scoredEvent;
+    }
+
+    public boolean isDelveEvent() {
+        return isDelveEvent;
+    }
+
+    public void setDelveEvent(boolean delveEvent) {
+        isDelveEvent = delveEvent;
+    }
+
+    public boolean isAncestorEvent() {
+        return isAncestorEvent;
+    }
+
+    public void setAncestorEvent(boolean ancestorEvent) {
+        isAncestorEvent = ancestorEvent;
+    }
+
+    public boolean isLeagueEvent() {
+        return isLeagueEvent;
+    }
+
+    public void setLeagueEvent(boolean leagueEvent) {
+        isLeagueEvent = leagueEvent;
     }
 }
