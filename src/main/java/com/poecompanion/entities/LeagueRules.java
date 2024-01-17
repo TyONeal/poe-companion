@@ -19,6 +19,10 @@ public class LeagueRules {
     @Column
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name = "league_id")
+    private League league;
+
     public LeagueRules() {
     }
 
