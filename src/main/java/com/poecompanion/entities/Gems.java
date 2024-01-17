@@ -11,5 +11,8 @@ public class Gems extends Item {
     @Column(nullable = false)
     private String name;
 
+    @Column
+    private int stackSize;
+
 
 }
