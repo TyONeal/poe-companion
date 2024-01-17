@@ -3,6 +3,7 @@ package com.poecompanion.entities;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "league_rules")
 public class LeagueRules {
 
     @Id
