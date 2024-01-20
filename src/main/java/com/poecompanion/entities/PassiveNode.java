@@ -26,4 +26,6 @@ public class PassiveNode {
     private String activeIcon;
 
     private String activeEffectImage;
+
+    private int masterEffect;
 }
