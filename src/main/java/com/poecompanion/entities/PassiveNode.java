@@ -28,4 +28,19 @@ public class PassiveNode {
     private String activeEffectImage;
 
     private int masterEffect;
+
+    private final String[] masteryEffectsStats = new String[]{};
+
+    private final String[] masteryEffectsReminderText = new String[]{};
+
+    private boolean isBlighted;
+
+    private boolean isTattoo;
+
+    private boolean isProxy;
+
+    private boolean isJewelSocket;
+
+
+
 }
