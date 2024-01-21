@@ -18,11 +18,8 @@ public class League {
     @Column
     private String realm;
 
-    @Column
-    private String categoryId;
-
-    @Column
-    private boolean categoryStatus;
+    @OneToOne
+    private LeagueCategory leagueCategory;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "league")
     private List<LeagueRules> leagueRulesList;
@@ -84,20 +81,12 @@ public class League {
         this.realm = realm;
     }
 
-    public String getCategoryId() {
-        return categoryId;
+    public LeagueCategory getLeagueCategory() {
+        return leagueCategory;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public boolean isCategoryStatus() {
-        return categoryStatus;
-    }
-
-    public void setCategoryStatus(boolean categoryStatus) {
-        this.categoryStatus = categoryStatus;
+    public void setLeagueCategory(LeagueCategory leagueCategory) {
+        this.leagueCategory = leagueCategory;
     }
 
     public List<LeagueRules> getLeagueRulesList() {
