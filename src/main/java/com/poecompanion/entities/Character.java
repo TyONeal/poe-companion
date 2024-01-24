@@ -45,6 +45,4 @@ public class Character {
     @Column
     private boolean isCurrent;
 
-    @Column
-    private boolean
 }
